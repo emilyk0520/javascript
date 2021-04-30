@@ -1,0 +1,13 @@
+{
+  "name": "classproject",
+  "version": "1.5.0",
+  "description": "Class Project",
+  "author": "Emily",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.0",
+    "body-parser": "^1.19.0"    
+   }
+}

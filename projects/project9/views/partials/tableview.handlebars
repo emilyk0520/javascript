@@ -1,0 +1,35 @@
+<div>
+    <h2>Open Items for {{projectName}} ({{projectAbbrev}})</h2>
+
+    {{#if noTable}}
+    <p>No open items were found for this project.</p>
+    {{/if}}
+
+    {{#if tableFound}}
+    <form id="actionForm" method="post" action="#" aria-live="polite"></form>
+
+    <table id="projectsTbl">
+    <thead>
+    <tr>
+        <th scope="col"><a href="#">ID</a></th>
+        <th scope="col"><a href="#">Type</a></th>
+        <th scope="col"><a href="#">Description</a></th>
+        <th scope="col"><a href="#">Priority</a></th>
+        <th scope="col"><a href="#">Assigned</a></th>
+    </tr>
+    </thead>
+    <tbody>
+        {{#each dataRows}}
+            <tr data-priority="{{this.item_priority}}">
+                <th scope="row">{{this.project_counter}}</th>
+                <td>{{this.item_type}}</td>
+                <td><a href="/edititem?id={{this.item_id}}">{{this.item_description}}</a></td>
+                <td>{{this.item_priority}}</td>
+                <td>{{this.employee_name}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+    </table>
+    {{/if}}
+</div>
+
